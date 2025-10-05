@@ -1,6 +1,7 @@
 package com.mayur.quizapp.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.mayur.quizapp.model.QuestionType;
 
@@ -15,4 +16,5 @@ public class QuestionResponse {
     private String text;
     private QuestionType type;
     private LocalDateTime createdAt;
+    private List<OptionResponse> options;
 }

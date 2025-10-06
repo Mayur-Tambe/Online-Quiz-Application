@@ -51,6 +51,9 @@ public class Question {
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Option> options;
 
+    @Column(name = "correct_text")
+    private String correctText;
+
     @PrePersist
     public void prePersist() {
         this.createdAt = LocalDateTime.now();
